@@ -28,11 +28,12 @@ COMMIT_MESSAGE="sync: $(date +'%Y-%m-%d %H:%M:%S')"
 
 sync() {
   mkdir "${SCRIPT_DIR}"/etc/systemd/system -p
+  mkdir "${SCRIPT_DIR}${HOME}/.config" -p
 
   echo "Syncing monerod configs..."
   rsync -av /etc/systemd/system/monerod.service \
     "${SCRIPT_DIR}"/etc/systemd/system/monerod.service
-  rsync -av /opt/p2pool/.config/monero "${SCRIPT_DIR}"/.config/
+  rsync -av /opt/p2pool/.config/monero "${SCRIPT_DIR}${HOME}/.config/"
 }
 
 # `:` means "takes an argument", not "mandatory argument".
