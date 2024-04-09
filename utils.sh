@@ -83,8 +83,7 @@ sync
 cd "${SCRIPT_DIR}"
 
 git add .
-git commit -m "${COMMIT_MESSAGE}" \
-  -m "Co-authored-by: ditatompel <ditatompel@users.noreply.github.com>"
+git commit -m "${COMMIT_MESSAGE}"
 git push -u origin main
 
 # vim: set ts=2 sw=2 et:
