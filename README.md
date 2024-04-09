@@ -7,6 +7,7 @@ This is my XMR p2pool server config.
 - Binary file location: `$HOME/.local/bin`.
 - Monerod data dir: `$HOME/.bitmonero`.
 - Monerod config file: `$HOME/.config/monero/monerod-mainnet.conf`.
+- P2Pool working dir: `$HOME/.local/lib/p2pool`.
 
 ## Create the user and set the environment
 

@@ -33,7 +33,19 @@ sync() {
   echo "Syncing monerod configs..."
   rsync -av /etc/systemd/system/monerod.service \
     "${SCRIPT_DIR}"/etc/systemd/system/monerod.service
-  rsync -av /opt/p2pool/.config/monero "${SCRIPT_DIR}${HOME}/.config/"
+  rsync -av "${HOME}"/.config/monero "${SCRIPT_DIR}${HOME}/.config/"
+
+  echo "Syncing lib/p2pool..."
+  mkdir "${SCRIPT_DIR}${HOME}/.local/lib/p2pool" -p
+  rsync -av --delete                          \
+    --exclude api                             \
+    --exclude core                            \
+    --exclude p2pool.*                        \
+    "${HOME}"/.local/lib/p2pool/              \
+    "${SCRIPT_DIR}${HOME}/.local/lib/p2pool/"
+
+  sed -i "s/WALLET_ADDR=\"[^\"]*\"/WALLET_ADDR=\"<redacted>\"/g" \
+    "${SCRIPT_DIR}${HOME}/.local/lib/p2pool/run.sh"
 }
 
 # `:` means "takes an argument", not "mandatory argument".
