@@ -46,6 +46,7 @@ sync() {
   rsync -av --delete                          \
     --exclude api                             \
     --exclude core                            \
+    --exclude p2pool_peers.txt                \
     --exclude p2pool.*                        \
     "${HOME}"/.local/lib/p2pool/              \
     "${SCRIPT_DIR}${HOME}/.local/lib/p2pool/"
