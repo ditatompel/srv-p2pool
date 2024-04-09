@@ -44,7 +44,6 @@ sync() {
   echo "Syncing lib/p2pool..."
   mkdir "${SCRIPT_DIR}${HOME}/.local/lib/p2pool" -p
   rsync -av --delete                          \
-    --exclude api                             \
     --exclude core                            \
     --exclude p2pool_peers.txt                \
     --exclude p2pool.*                        \
