@@ -1,0 +1,14 @@
+# FIFO socket for controlling p2pool daemon
+# See https://github.com/SChernykh/p2pool/blob/master/docs/SYSTEMD.MD
+[Unit]
+Description=Command FIFO for p2pool daemon
+
+[Socket]
+ListenFIFO=/run/p2pool/p2pool.control
+DirectoryMode=0755
+SocketMode=0666
+SocketUser=p2pool
+SocketGroup=p2pool
+RemoveOnStop=true
+
+# vim: filetype=systemd ts=4 sw=4 et

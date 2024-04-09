@@ -1,0 +1,22 @@
+[Unit]
+Description=p2pool daemon
+After=network-online.target systemd-modules-load.service monerod.service
+Wants=network-online.target systemd-modules-load.service monerod.service
+Requires=p2pool.socket
+
+[Service]
+User=p2pool
+Group=p2pool
+Type=exec
+Sockets=p2pool.socket
+StandardInput=socket
+StandardOutput=journal
+StandardError=journal
+WorkingDirectory=/opt/p2pool/.local/lib/p2pool
+ExecStart=/opt/p2pool/.local/lib/p2pool/run.sh
+TimeoutStopSec=60
+
+[Install]
+WantedBy=multi-user.target
+
+# vim: filetype=systemd ts=4 sw=4 et

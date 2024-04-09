@@ -35,6 +35,12 @@ sync() {
     "${SCRIPT_DIR}"/etc/systemd/system/monerod.service
   rsync -av "${HOME}"/.config/monero "${SCRIPT_DIR}${HOME}/.config/"
 
+  echo "Copying p2pool systemd service and socket FIFO..."
+  cp -u /etc/systemd/system/p2pool.service \
+    "${SCRIPT_DIR}"/etc/systemd/system/p2pool.service
+  cp -u /etc/systemd/system/p2pool.socket \
+    "${SCRIPT_DIR}"/etc/systemd/system/p2pool.socket
+
   echo "Syncing lib/p2pool..."
   mkdir "${SCRIPT_DIR}${HOME}/.local/lib/p2pool" -p
   rsync -av --delete                          \
