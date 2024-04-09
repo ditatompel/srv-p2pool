@@ -1,0 +1,18 @@
+[Unit]
+Description=Monero Daemon
+After=network.target
+
+[Service]
+User=p2pool
+Group=p2pool
+Type=forking
+GuessMainPID=no
+ExecStart=/opt/p2pool/.local/bin/monerod \
+    --detach \
+    --config-file=/opt/p2pool/.config/monero/monerod-mainnet.conf
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+# vim: filetype=systemd ts=4 sw=4 et
