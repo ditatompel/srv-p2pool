@@ -82,8 +82,9 @@ sync
 
 cd "${SCRIPT_DIR}"
 
+git checkout automation
 git add .
 git commit -m "${COMMIT_MESSAGE}"
-git push -u origin main
+git push -u origin automation
 
 # vim: set ts=2 sw=2 et:
