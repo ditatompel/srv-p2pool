@@ -1,1 +1,1 @@
-{"config":{"ports":[{"port":3333,"tls":false}],"fee":0,"minPaymentThreshold":300000000},"network":{"height":3142081},"pool":{"stats":{"lastBlockFound":"1714772331000"},"blocks":["8f76...95f3:1714772331","3141147"],"miners":1170,"hashrate":10012814,"roundHashes":1102706845982}}
+{"config":{"ports":[{"port":3333,"tls":false}],"fee":0,"minPaymentThreshold":300000000},"network":{"height":3142232},"pool":{"stats":{"lastBlockFound":"1714900723000"},"blocks":["4da3...bc7b:1714900723","3142185"],"miners":1165,"hashrate":9702283,"roundHashes":60466695041}}
