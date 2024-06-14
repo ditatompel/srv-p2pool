@@ -1,0 +1,21 @@
+name: Check Monerod
+on:
+  push:
+
+jobs:
+
+  health:
+    name: Check Monerod RPC
+    runs-on: ubuntu-latest
+    if: github.repository_owner == 'ditatompel'
+    environment: production
+    steps:
+    - name: Check Monerod get_info RPC
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        port: ${{ secrets.SSH_PORT }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          curl -s http://127.0.0.1:18081/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"get_info"}' -H 'Content-Type: application/json'
