@@ -24,7 +24,7 @@ print_help()
   echo
 }
 
-COMMIT_MESSAGE="sync: $(date +'%Y-%m-%d %H:%M:%S')"
+COMMIT_MESSAGE="chore(bot): Sync update $(date +'%Y-%m-%d %H:%M:%S')"
 
 sync() {
   mkdir "${SCRIPT_DIR}"/etc/systemd/system -p
