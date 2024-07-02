@@ -1,1 +1,1 @@
-{"pool_list":["pplns"],"pool_statistics":{"hashRate":9989219,"miners":1166,"totalHashes":978243551807992,"lastBlockFoundTime":1719913172,"lastBlockFound":3183974,"totalBlocksFound":2461,"pplnsWeight":218081557324,"pplnsWindowSize":2160,"sidechainDifficulty":99892191,"sidechainHeight":8053576}}
+{"pool_list":["pplns"],"pool_statistics":{"hashRate":10000,"miners":0,"totalHashes":0,"lastBlockFoundTime":1719913172,"lastBlockFound":3183974,"totalBlocksFound":2461,"pplnsWeight":100000,"pplnsWindowSize":2160,"sidechainDifficulty":100000,"sidechainHeight":0}}
