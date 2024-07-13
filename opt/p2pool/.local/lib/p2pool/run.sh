@@ -9,7 +9,6 @@ WORKING_DIR="${HOME}"/.local/lib/p2pool
   --p2p 0.0.0.0:37888                        \
   --stratum-api                              \
   --data-api "${WORKING_DIR}"/api            \
-  --config "${WORKING_DIR}"/mini_config.json \
   --wallet ${WALLET_ADDR}                    \
   --mini
 
